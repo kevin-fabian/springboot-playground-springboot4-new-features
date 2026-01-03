@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: spring-security7_password_x509
+  ssl:
+    bundle:
+      jks:
+        web-server:
+          key:
+            alias: identity
+          keystore:
+            location: classpath:server.p12
+            password: 123455
+            type: PKCS12
+          truststore:
+            location: classpath:truststore.p12
+            password: 123456
+            type: PKCS12
+
+server:
+  ssl:
+    enabled: true
+    bundle: web-server
+    client-auth: need

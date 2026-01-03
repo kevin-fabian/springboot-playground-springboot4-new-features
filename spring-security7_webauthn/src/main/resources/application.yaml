@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:./data/passkeydb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  application:
+    name: spring-security7_webauthn
+  sql:
+    init:
+      mode: always
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.security: DEBUG

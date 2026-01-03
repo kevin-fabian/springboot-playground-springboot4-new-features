@@ -1,0 +1,24 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: springboot-4
+
+app:
+  name: SpringBoot4 Application
+  version: 0.0.1-SNAPSHOT
+
+---
+spring:
+  http:
+
+    serviceclient:
+      greet:
+        base-url: "http://localhost:8080"
+        connect-timeout: 1s
+        read-timeout: 2
+        apiversion:
+          default: 'v1'
+          insert:
+            header: X-API-Version
+
